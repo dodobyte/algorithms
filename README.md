@@ -2,7 +2,7 @@
 
 Some stand-alone algorithms implemented in Go.
 
-- Sorting Algorithms
+- [Sorting Algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm)
   - `sort.go` [Quicksort](https://en.wikipedia.org/wiki/Quicksort) and Bubble sort algorithms.
 - [Recursive Descent Parser](https://en.wikipedia.org/wiki/Recursive_descent_parser)
   - `rdp_rpn.go` Convert a mathematical expression into [Reverse Polish Notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation).
