@@ -6,29 +6,16 @@ import (
 	"os"
 )
 
-// Precedence
-const (
-	PLUS  = 1
-	MINUS = 1
-	TIMES = 2
-	SLASH = 2
-)
-
-// Association
-const (
-	LEFT = iota
-	RIGHT
-)
-
 type prop struct {
-	prec, assoc int
+	prec  int
+	assoc string
 }
 
 var props = map[byte]prop{
-	'+': prop{PLUS, LEFT},
-	'-': prop{MINUS, LEFT},
-	'*': prop{TIMES, LEFT},
-	'/': prop{SLASH, LEFT},
+	'+': prop{1, "left"},
+	'-': prop{1, "left"},
+	'*': prop{2, "left"},
+	'/': prop{2, "left"},
 }
 
 type token struct {
@@ -77,7 +64,7 @@ func shuntingYard() {
 			as := props[tok.c].assoc
 			for len(stack) > 0 {
 				spr := props[peek().c].prec
-				if pr < spr || (pr == spr && as == LEFT) {
+				if pr < spr || (pr == spr && as == "left") {
 					out = append(out, pop())
 				} else {
 					break
