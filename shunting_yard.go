@@ -57,14 +57,7 @@ func peek() token {
 }
 
 func next() {
-	c, err := reader.ReadByte()
-	if err != nil {
-		return
-	}
-	if c == ' ' {
-		next()
-		return
-	}
+	c, _ := reader.ReadByte()
 	if c >= '0' && c <= '9' {
 		reader.UnreadByte()
 		fmt.Fscanf(reader, "%d", &tok.val)
@@ -76,11 +69,9 @@ func next() {
 
 func shuntingYard() {
 	for next(); tok.c != '\n'; next() {
-		if tok.c == 0 {
-			out = append(out, tok)
-			continue
-		}
 		switch tok.c {
+		case 0:
+			out = append(out, tok)
 		case '+', '-', '*', '/':
 			pr := props[tok.c].prec
 			as := props[tok.c].assoc
