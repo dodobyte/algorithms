@@ -13,3 +13,7 @@ Some stand-alone algorithms implemented in Go.
   - `trie.go` Trie implementation. insert & lookup implemented with some test code.
 - [Shunting Yard Algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
   - `shunting_yard.go` Parse mathematical expressions with shunting-yard algorithm and evaluate with a [stack machine](https://en.wikipedia.org/wiki/Stack_machine).
+- [Ray casting](https://en.wikipedia.org/wiki/Ray_casting)
+  - See https://github.com/dodobyte/ray-casting
+- [A* pathfinding](https://en.wikipedia.org/wiki/A*_search_algorithm)
+  - See https://github.com/dodobyte/astar
