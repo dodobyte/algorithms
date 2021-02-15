@@ -1,6 +1,6 @@
 # Algorithms in Go
 
-Some stand-alone algorithms implemented in Go.
+Some stand-alone algorithms implemented in Go. See my [gist](https://gist.github.com/dodobyte) for the C version of some of the algorithms.
 
 - [Sorting Algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm)
   - `sort.go` [Quicksort](https://en.wikipedia.org/wiki/Quicksort) and Bubble sort algorithms.
