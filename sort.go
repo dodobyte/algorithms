@@ -37,18 +37,6 @@ func qsort(l []int) {
 	qsort(l[pos+1:])
 }
 
-// Bubble sort algorithm for verification
-func bubble(l []int) {
-	n := len(list)
-	for i := 0; i < n; i++ {
-		for j := i + 1; j < n; j++ {
-			if l[j] < l[i] {
-				l[i], l[j] = l[j], l[i]
-			}
-		}
-	}
-}
-
 func main() {
 	qsort(list)
 	fmt.Println(list)
